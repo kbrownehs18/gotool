@@ -2,8 +2,9 @@ package tests
 
 import (
 	"fmt"
-	"gotool/cryptoutils"
 	"testing"
+
+	"github.com/kbrownehs18/gotool/cryptoutils"
 )
 
 func TestRSA(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"gotool/arrayutils"
+	"github.com/kbrownehs18/gotool/arrayutils"
 )
 
 // AuthCodeType auth code type
