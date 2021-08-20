@@ -56,3 +56,8 @@ ot7EvW+2jo93Suooj3EKA97ASXJtUG26LcZbi1JYAWVXYg==
 	}
 	fmt.Println(ss)
 }
+
+func TestHash(t *testing.T) {
+	s := "scnjl"
+	fmt.Println(cryptoutils.SHA1(s))
+}
