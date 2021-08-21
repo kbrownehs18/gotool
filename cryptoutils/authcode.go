@@ -131,7 +131,7 @@ func Authcode(text string, params ...interface{}) (str string, err error) {
 		box[a], box[j] = box[j], box[a]
 		result = append(result, byte(int(textB[i])^(box[(box[a]+box[j])%256])))
 	}
-	fmt.Println(result)
+
 	if isEncode == ENCODE {
 		// trim equal
 		return keyC + Base64Encode(result), nil
