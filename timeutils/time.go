@@ -46,7 +46,7 @@ var (
 
 // TimeFormat format time.Time
 func TimeFormat(t time.Time, f int) (timeStr string) {
-	return t.Format(layouts[f])
+	return t.Format(Layouts[f])
 }
 
 // Now format now
