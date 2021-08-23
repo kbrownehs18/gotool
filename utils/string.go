@@ -73,6 +73,11 @@ func IsEmpty(val interface{}) (b bool) {
 	return b
 }
 
+// IsBlank trim string then check
+func IsBlank(str string) bool {
+	return Trim(str) == ""
+}
+
 // Trim remove "", \r, \t, \n
 func Trim(str string) string {
 	return strings.Trim(str, " \r\n\t")
