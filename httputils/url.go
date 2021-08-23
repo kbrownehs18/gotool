@@ -1,18 +1,16 @@
 package httputils
 
-import (
-	"net/http"
-)
+import "net/url"
 
 // URLEncode urlencode
 func URLEncode(params interface{}) string {
 	q, ok := params.(string)
 	if ok {
-		return http.QueryEscape(q)
+		return url.QueryEscape(q)
 	}
 	m, ok := params.(map[string]string)
 	if ok {
-		val := http.Values{}
+		val := url.Values{}
 		for k, v := range m {
 			val.Set(k, v)
 		}
@@ -25,5 +23,5 @@ func URLEncode(params interface{}) string {
 
 // URLDecode urldecode
 func URLDecode(str string) (string, error) {
-	return http.QueryUnescape(str)
+	return url.QueryUnescape(str)
 }
